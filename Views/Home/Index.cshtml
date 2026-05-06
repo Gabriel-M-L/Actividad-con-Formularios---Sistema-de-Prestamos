@@ -3,6 +3,36 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <form action="@Url.Action("comprobarApto", "Home")" method="post">
+        Nombre completo: <input type="text" name="nombre"> <br>
+        Edad: <input type="number" name="edad"> <br>
+        DNI: <input type="number" name="dni"> <br>
+        ¿Actualmente trabaja?<br>
+        <input type="radio" name="trabajo" value="true"> si <br>
+        <input type="radio" name="trabajo" value="false"> no <br>
+        Tipo de empleo:
+        <select name="tipoTrabajo"> 
+            <option value="0"> Relación de dependencia</option> 
+            <option value="1"> Monotributista</option> 
+            <option value="2"> Autónomo</option> 
+            <option value="3"> Desempleado</option> 
+        </select> <br>
+        Ingreso mensual: <input type="number" name="ingresos"> <br>
+        ¿Posee otras deudas?<br>
+        <input type="radio" name="deuda" value="true"> si <br>
+        <input type="radio" name="deuda" value="false"> no <br>
+        Seleccione cuáles <br>
+        <input type="checkbox" name="tarjetaCredito"> Tarjeta de crédito <br>
+        <input type="checkbox" name="prestamoBancario"> Préstamo bancario <br>
+        <input type="checkbox" name="prestamoInformal"> Préstamo informal <br>
+        Monto solicitado: <input type="number" name="monto"> <br>
+        Plazo de devolucion:
+        <select name="plazo">
+            <option value="6"> 6</option>
+            <option value="12"> 12</option>
+            <option value="24"> 24</option>
+        </select> <br>
+        <input type="checkbox" name="terminos"> acepta los terminos y condiciones <br>
+        <input type="submit" value="Solicitar prestamo"> <br>
+    </form>
 </div>

@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<div class="text-center">
+    <h1>hola @ViewBag.nombre </h1>
+    @if(ViewBag.apto){
+        <h2> felicidades por tu prestamo!!!!!</h2>
+    }
+    else{
+        <h2> lo sentimos, no eres apto para el prestamo</h2>
+    }
+</div>
